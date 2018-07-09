@@ -66,7 +66,7 @@ labels = labels.';
 condition_pairs = [13 14 15 16 9 10 11 12];
 
 % Iterate over all subjects
-for ncv = 2:4   
+for ncv = 1:20   
 %     Get data and trial information for that current subject
     raw_features_test = all_data(indices(ncv):indices(ncv+1),:);
     raw_testLabel = labels(indices(ncv):indices(ncv+1));
@@ -88,7 +88,7 @@ for ncv = 2:4
     end
     
 %     Iterate over 8 pairs of conditions
-    for leave_out = 2:4      
+    for leave_out = 1:8      
 %         Get training data i.e. all data leaving out that of current subject and current condition pair
         trainData = sparse(raw_features_train(nosub_train_trialinfo ~= leave_out | nosub_train_trialinfo ~= condition_pairs(leave_out),:));
         trainLabel = raw_trainLabel(nosub_train_trialinfo ~= leave_out | nosub_train_trialinfo ~= condition_pairs(leave_out));
