@@ -2,8 +2,6 @@ SVM for EEG
 
 Files
 models_160.m    - MATLAB script
-
-models_160.m file
 This file contains the code used to read in continuous EEG signals collected from 20 human subjects performing tasks under 16 different conditions
 
 Setup
@@ -11,7 +9,10 @@ LibSVM 3.22
 
 Usage
 Change file paths as needed to point to subject data and execute
-Creates 160 model files as well as saves the weights and biases separately
+
+Output
+Gives optimization and accuracy data for each model
+Creates 160 model files as well as files for the weights and biases
 
 Author
 Anushree Mehta <abmehta@cs.umass.edu>
